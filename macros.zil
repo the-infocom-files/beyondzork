@@ -11,7 +11,7 @@
 	     (A AN) *	     <PRINTA .X>
 	     (AO ANO)	     <PRINTA>
 	     (CA CAN) *	     <PRINTCA .X>
-	     (CAO CANO) *    <PRINTCA>
+	     (CAO CANO)      <PRINTCA>
 	     (CHAR CHR C) *  <PRINTC .X>
 	     B *	     <PRINTB .X>
 	     THE *	     <THE-PRINT .X>

@@ -1748,7 +1748,7 @@ By what Name shall your character be known?">
 		<SETG INCOLOR <GETB .TBL 2>>
 		<SETG GCOLOR <GETB .TBL 3>>
 		<V-REFRESH>
-	        <TELL CR "[Color pallette " N ,PALLETTE
+	        <TELL CR "[Color palette " N ,PALLETTE
 		      " of " N .CNT ".]" CR>
 		<COND (<IGRTR? PALLETTE .CNT>
 		       <SETG PALLETTE 1>)>

@@ -20,18 +20,16 @@ The following sources provide further information on Beyond Zork:
 
 ## Version History
 
-Zarf's Obsessively Complete Infocom Catalog holds copies of the game files for every existing version of Beyond Zork listed in the Infocom Fact Sheet. It also holds the source files for versions 50, 57/871221 and 60/880610.
-
-| Release | Serial | Story File                       | Zarf Sources         | Historical Sources |
-| -------:|:------:|:--------------------------------:|:--------------------:|:------------------:|
-|       1 | 870412 | [beyondzork-alpha-r1-s870412.z5] |                    - |                  - |
-|       1 | 870715 |  [beyondzork-beta-r1-s870715.z5] |                    - |                  - |
-|      47 | 870915 |      [beyondzork-r47-s870915.z5] |                    - |                  - |
-|      49 | 870917 |      [beyondzork-r49-s870917.z5] |                    - |                  - |
-|      50 |      - |                                - | [beyondzork-r50.zip] |      [revision 50] |
-|      51 | 870923 |      [beyondzork-r51-s870923.z5] |                    - |                  - |
-|      57 | 871221 |      [beyondzork-r57-s871221.z5] | [beyondzork-r57.zip] |      [revision 57] |
-|      60 | 880610 |      [beyondzork-r60-s880610.z5] | [beyondzork-r60.zip] |   [final revision] |
+| Release | Serial | Type | Story File                       | Obsessive Sources    | Historical Sources |
+| -------:|:------:|:----:|:--------------------------------:|:--------------------:|:------------------:|
+|       1 | 870412 |  DEV | [beyondzork-alpha-r1-s870412.z5] |                    - |                  - |
+|       1 | 870715 |  DEV |  [beyondzork-beta-r1-s870715.z5] |                    - |                  - |
+|      47 | 870915 |  PUB |      [beyondzork-r47-s870915.z5] |                    - |                  - |
+|      49 | 870917 |  PUB |      [beyondzork-r49-s870917.z5] |                    - |                  - |
+|      50 |      - |  ??? |                                - | [beyondzork-r50.zip] |      [revision 50] |
+|      51 | 870923 |  PUB |      [beyondzork-r51-s870923.z5] |                    - |                  - |
+|      57 | 871221 |  PUB |      [beyondzork-r57-s871221.z5] | [beyondzork-r57.zip] |      [revision 57] |
+|      60 | 880610 |  FIN |      [beyondzork-r60-s880610.z5] | [beyondzork-r60.zip] |   [final revision] |
 
 [beyondzork-alpha-r1-s870412.z5]: https://eblong.com/infocom/gamefiles/beyondzork-alpha-r1-s870412.z5
 

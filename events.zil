@@ -2668,7 +2668,7 @@ THE ,FCROWD ,PTAB "\"Greetings, brave ">
 		<TELL CTHE ,GRINDER 
 " looks you up and down. \"Peasants,\" he sniffs, adjusting a knob on his "
 'GURDY ". \"Like unto sheep.\"|
-  He turns the crank of " THE ,GURDY ", and the air is filled with the combined stench of five herds of sheep, accompanied by a cacophany of hateful bleating." CR>)
+  He turns the crank of " THE ,GURDY ", and the air is filled with the combined stench of five herds of sheep, accompanied by a cacophony of hateful bleating." CR>)
 	       (<EQUAL? ,GRTIMER 2>
 		<UNMAKE ,NYMPH ,LIVING>
 		<TELL "Ignoring you for the moment, " THE ,GRINDER 

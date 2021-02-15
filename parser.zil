@@ -1007,7 +1007,7 @@
 	       (T
 		<RFALSE>)>>
 		 
-<ROUTINE BUZZER-WORD? (WORD "AUX" TBL LEN X)
+<ROUTINE BUZZER-WORD? (WORD "AUX" TBL LEN)
          <SET LEN <GET ,Q-BUZZES 0>>
 	 <COND (<SET TBL <INTBL? .WORD <REST ,Q-BUZZES 2> .LEN>> 
 	        <TO-DO-THING-USE "ask about" "ASK CHARACTER ABOUT">
@@ -1122,7 +1122,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 ; <GLOBAL P-DOLLAR-FLAG:FLAG <>>
 
 <ROUTINE NUMBER? (PTR "AUX" (SUM 0) (TIM <>) (EXC <>) ; (DOLLAR 0)
-		  	    CNT BPTR CHR CCTR TMP NW)
+		  	    CNT BPTR CHR TMP NW)
 	 <SET TMP <REST ,P-LEXV <+ .PTR .PTR>>>
 	 <SET BPTR <GETB .TMP 3>>
 	 <SET CNT <GETB .TMP 2>>
@@ -2026,7 +2026,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 		      <SETG P-PRSI <BUT-MERGE ,P-PRSI>>)>)>
 	<RTRUE>>  
 
-<ROUTINE BUT-MERGE (TBL "AUX" LEN BUTLEN (CNT 1) (MATCHES 0) OBJ NTBL X) 
+<ROUTINE BUT-MERGE (TBL "AUX" LEN (CNT 1) (MATCHES 0) OBJ NTBL X)
 	<SET LEN <GET .TBL ,P-MATCHLEN>>
 	<PUT ,P-MERGE ,P-MATCHLEN 0>
 	<REPEAT ()
@@ -2053,7 +2053,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 	       (<ZMEMQ .WRD ,CHAR-POSS-TABLE>
 		<RTRUE>)>>
 
-<ROUTINE SNARFEM (PTR EPTR TBL "AUX" (BUT <>) LEN WV WRD NW (WAS-ALL? <>)
+<ROUTINE SNARFEM (PTR EPTR TBL "AUX" (BUT <>) WV WRD NW (WAS-ALL? <>)
 				     ONEOBJ) 
    ;"Next SETG 6/21/84 for WHICH retrofix"
    <SETG P-AND <>>
@@ -2273,7 +2273,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 
 <CONSTANT LAST-OBJECT:OBJECT 0>
 
-<ROUTINE MOBY-FIND (TBL "AUX" OBJ LEN NAM ADJ X)
+<ROUTINE MOBY-FIND (TBL "AUX" OBJ LEN NAM ADJ)
   	 <SET OBJ 1>
 	 <SET NAM ,P-NAM>
 	 <SET ADJ ,P-ADJ>
@@ -3185,7 +3185,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 	    <COND (<IGRTR? PTR .LEN>
 		   <RFALSE>)>>>
 
-<ROUTINE CLICKED (CLK Y X "AUX" NX NY DIR TMP MX MY)
+<ROUTINE CLICKED (CLK Y X "AUX" NX NY DIR MX MY)
 	 
        ; "Zero-align X and Y."
 

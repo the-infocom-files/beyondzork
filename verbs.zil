@@ -490,7 +490,7 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 	 <PUT ,AUX-TABLE 1 0>
 	 <RETURN <PICK-ONE ,AUX-TABLE>>>
 
-<ROUTINE DOWN-TO? ("AUX" (RM 0) X)
+<ROUTINE DOWN-TO? ("AUX" (RM 0))
 	 <COND (<EQUAL? ,ABOVE ,ORUINS>
 		<SET RM <ANY-TOUCHED? ,RUIN-ROOMS>>
 		<COND (<AND <ZERO? .RM>
@@ -568,7 +568,7 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 		<MAKE .RM ,TOUCHED>)>
 	 <RETURN .RM>>
 
-<ROUTINE PRE-TAKE ("AUX" L LL WHO X X2)
+<ROUTINE PRE-TAKE ("AUX" L LL X X2)
 	 <SET L <LOC ,PRSO>>
 	 <COND (<T? .L>
 		<SET LL <LOC .L>>)>
@@ -1219,7 +1219,7 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 	 <FAILED "UNDO">
 	 <RTRUE>>
 
-<ROUTINE CANT-SAVE? ("AUX" OBJ NXT X)
+<ROUTINE CANT-SAVE? ("AUX" OBJ)
 	 <COND (<T? ,CHOKE>
 		<MUMBLAGE ,SKELETON>
 		<RTRUE>)
@@ -1357,7 +1357,7 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 	 <TELL ,IMPOSSIBLY "open " AO ,PERIOD>
 	 <RTRUE>>
 
-<ROUTINE V-OPEN ("AUX" X) 
+<ROUTINE V-OPEN ()
 	 <COND (<NOT <IS? ,PRSO ,OPENABLE>>
 		<CANT-OPEN-PRSO>
 		<RTRUE>)
@@ -3266,7 +3266,7 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 	 <NO-RESPONSE>
 	 <RTRUE>>
 
-<ROUTINE V-REPLY ("AUX" WHO)
+<ROUTINE V-REPLY ()
 	 <COND (<SILLY-SPEAK?>
 		<RFATAL>)>
 	 <NO-RESPONSE ,PRSO>
@@ -3337,8 +3337,8 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 	       (T
 		<RFALSE>)>>
 	 		
-<ROUTINE V-NAME ("OPT" (OBJ ,PRSO) 
-		 "AUX" TBL WORD BASE LEN PTR CHAR COMPLEX BAD ANY X)
+<ROUTINE V-NAME ("OPT" (OBJ ,PRSO)
+		 "AUX" TBL WORD BASE LEN PTR CHAR BAD ANY)
 	 <PCLEAR>
 	 <SET TBL <GETP .OBJ ,P?NAME-TABLE>>
 	 <COND (<OR <NOT <IS? .OBJ ,NAMEABLE>>
@@ -4672,7 +4672,7 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 	 <DIROUT ,D-SCREEN-ON>
 	 <RTRUE>>
 
-<ROUTINE V-VERSION ("AUX" X)
+<ROUTINE V-VERSION ()
 	 <CRLF>
 	 <COND (<T? ,COLORS?>
 		<COLOR ,INCOLOR ,BGND>)
@@ -4729,7 +4729,7 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 <GLOBAL STATS:TABLE <TABLE 0 0 0 0 0 0 0 0>>
 <GLOBAL MAXSTATS:TABLE <TABLE 0 0 0 0 0 0 0 0>>
 
-<ROUTINE V-STATUS ("AUX" (CNT 0) X)
+<ROUTINE V-STATUS ("AUX" (CNT 0))
 	 <COND (<AND <T? ,DMODE>
 		     <T? ,VT220>
 		     <NOT <EQUAL? ,IN-DBOX ,SHOWING-STATS>>
@@ -5046,7 +5046,7 @@ A ,SHAPE ", stretched across your path like the skin of a drum." CR>
 	    <COND (<IGRTR? X .KEYS>
 		   <RFALSE>)>>>
 
-<ROUTINE V-SETTINGS ("AUX" TOP LMARGIN LINE X KEY)
+<ROUTINE V-SETTINGS ("AUX" TOP LMARGIN LINE KEY)
 	 <SET TOP </ <- ,HEIGHT 19> 2>>
 	 <SET LMARGIN </ <- ,WIDTH 52> 2>>
 	 <COLOR ,GCOLOR ,BGND>

@@ -81,7 +81,7 @@
 	(EXIT-STR "scuttling across the dirt")
 	(ACTION RAT-F)>
 
-<ROUTINE RAT-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE RAT-F ("OPT" (CONTEXT <>))
 	 <COND (<T? .CONTEXT>
 		<RFALSE>)
 	       (<THIS-PRSI?>
@@ -196,7 +196,7 @@
 	(EXIT-STR "lurking among the reeds")
 	(ACTION SNIPE-F)>
 
-<ROUTINE SNIPE-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE SNIPE-F ("OPT" (CONTEXT <>))
 	 <COND (<T? .CONTEXT>
 		<RFALSE>)
 	       (<THIS-PRSI?>
@@ -280,7 +280,7 @@
 	(EXIT-STR "lurking in the shadows")
 	(ACTION SPIDER-F)>
 
-<ROUTINE SPIDER-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE SPIDER-F ("OPT" (CONTEXT <>))
 	 <COND (<T? .CONTEXT>
 		<RFALSE>)
 	       (<THIS-PRSI?>
@@ -317,7 +317,7 @@
 	(EXIT-STR "squishing across the debris")
 	(ACTION SLUG-F)>
 
-<ROUTINE SLUG-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE SLUG-F ("OPT" (CONTEXT <>))
 	 <COND (<T? .CONTEXT>
 		<RFALSE>)
 	       (<THIS-PRSI?>
@@ -586,7 +586,7 @@
 	 <PRINT " seems ordinary enough.|">
 	 <RTRUE>>
 
-<ROUTINE START-WORM (STR "AUX" X)
+<ROUTINE START-WORM (STR)
 	 <MAKE ,WORM ,MONSTER>
 	 <UNMAKE ,WORM ,SLEEPING>
 	 <MAKE ,WORM ,NOALL>
@@ -628,7 +628,7 @@
 	(EXIT-STR "stalking through the undergrowth")
 	(ACTION CROC-F)>
 
-<ROUTINE CROC-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE CROC-F ("OPT" (CONTEXT <>))
 	 <COND (<T? .CONTEXT>
 		<RFALSE>)
 	       (<THIS-PRSI?>
@@ -664,7 +664,7 @@
 	(EXIT-STR "prowling between the trees")
 	(ACTION HOUND-F)>
 
-<ROUTINE HOUND-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE HOUND-F ("OPT" (CONTEXT <>))
 	 <COND (<T? .CONTEXT>
 		<RFALSE>)
 	       (<THIS-PRSI?>
@@ -1237,7 +1237,7 @@
 	(GENERIC GENERIC-MONSTER-F)
 	(ACTION GRUE-F)>
 
-<ROUTINE GRUE-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE GRUE-F ("OPT" (CONTEXT <>))
 	 <COND (<T? .CONTEXT>
 		<RFALSE>)
 	       (<THIS-PRSI?>
@@ -1419,7 +1419,7 @@
 	 <TELL B ,W?SNOWDRIFT>
 	 <RTRUE>>
 
-<ROUTINE START-WIGHT ("AUX" X)
+<ROUTINE START-WIGHT ()
 	 <MAKE ,WIGHT ,MONSTER>
 	 <MAKE ,WIGHT ,LIVING>
 	 <UNMAKE ,WIGHT ,SURFACE>

@@ -464,7 +464,7 @@
 		<RFALSE>)>
 	 <RETURN ,IN-YARD>>
 
-<ROUTINE IN-STABLE-F ("OPT" (CONTEXT <>) "AUX" (U 0) ANY X)
+<ROUTINE IN-STABLE-F ("OPT" (CONTEXT <>) "AUX" (U 0) ANY)
 	 <COND (<IN? ,UNICORN ,STALL>
 		<INC U>)>
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
@@ -628,7 +628,7 @@ THE ,KITCHEN ,PTAB CA ,BANDITS " is hogging the fireplace." CR>
 	(GLOBAL CELLAR-DOOR CELLAR-STAIR KITCHEN CELLAR PUB GRUBBO)
 	(ACTION IN-KITCHEN-F)>
 
-<ROUTINE IN-KITCHEN-F ("OPT" (CONTEXT <>) "AUX" (D 0) L)
+<ROUTINE IN-KITCHEN-F ("OPT" (CONTEXT <>) "AUX" (D 0))
 	 <COND (<IS? ,CELLAR-DOOR ,OPENED>
 		<INC D>)>
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
@@ -1308,7 +1308,7 @@ THE ,GCORNER>
 		<TELL B ,W?TREES>)>
 	 <RTRUE>>
 
-<ROUTINE MENTION-GLYPH? ("AUX" X)
+<ROUTINE MENTION-GLYPH? ()
 	 <COND (<GLOBAL-IN? ,HERE ,GLYPH>
 		<TELL ,TAB CA ,GLYPH " is inscribed in the ">
 		<COND (<GLOBAL-IN? ,HERE ,SNOW>
@@ -1645,7 +1645,7 @@ THE ,BENCH " in the center of the room">
 	 	BRIDGE)
 	(ACTION IN-ACCARDI-F)>
 
-<ROUTINE IN-ACCARDI-F ("OPT" (CONTEXT <>) "AUX" OBJ)
+<ROUTINE IN-ACCARDI-F ("OPT" (CONTEXT <>))
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
 		<TELL
 "Home of the most famous of all Enchanters' Guilds, Accardi is usually crowded with autograph seekers and hopeful young apprentices. But the crooked streets are oddly quiet today" 
@@ -1828,7 +1828,7 @@ THE ,BENCH " in the center of the room">
 	       (T
 		<RFALSE>)>>
 
-<ROUTINE TOWER-BASE-UP ("AUX" RM X)
+<ROUTINE TOWER-BASE-UP ("AUX" RM)
 	 <COND (<NOT <IS? ,LEVEL1A ,TOUCHED>>
 		<MAKE ,LEVEL1A ,TOUCHED>
 		<SCRAMBLE ,TOWER1-ROOMS>
@@ -1863,7 +1863,7 @@ THE ,BENCH " in the center of the room">
 	 <YOU-CLIMB-UP>
 	 <RETURN ,LEVEL2A>>
 
-<ROUTINE LEVEL2-UP ("AUX" RM X)
+<ROUTINE LEVEL2-UP ("AUX" RM)
 	 <COND (<NOT <IS? ,LEVEL3A ,TOUCHED>>
 		<MAKE ,LEVEL3A ,TOUCHED>
 		<NEW-EXIT? ,LEVEL3A ,P?DOWN %<+ ,SCONNECT 1 ,MARKBIT>
@@ -2904,7 +2904,7 @@ THE ,BENCH " in the center of the room">
 	(GLOBAL DOCK JUNGLE NULL)
 	(ACTION OVER-JUNGLE-F)>
 
-<ROUTINE OVER-JUNGLE-F ("OPT" (CONTEXT <>) "AUX" X Y)
+<ROUTINE OVER-JUNGLE-F ("OPT" (CONTEXT <>) "AUX" X)
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
 		<SET X ,W?WEST>
 		<COND (<EQUAL? ,GON 7 8>
@@ -3089,7 +3089,7 @@ THE ,BENCH " in the center of the room">
 	 <CRLF>
 	 <RFALSE>>
 
-<ROUTINE SE-WALL-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE SE-WALL-F ("OPT" (CONTEXT <>))
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
 		<TELL 
 "A sunlit wall of stone rises above the snow-dusted ground. Gazing farther up the mountainside, you see the parapets of a mighty " 'CASTLE ,PERIOD>
@@ -3128,7 +3128,7 @@ THE ,BENCH " in the center of the room">
 	(GLOBAL SWALL SUNBEAM)
 	(ACTION SE-CAVE-F)>
 
-<ROUTINE SE-CAVE-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE SE-CAVE-F ("OPT" (CONTEXT <>))
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
 		<NOTE-WALL ,SWALL ,W?SOUTHEAST>
 		<RTRUE>)
@@ -3195,7 +3195,7 @@ THE ,BENCH " in the center of the room">
 	(EXIT-STR "A cold, hard wall blocks your path.")
 	(ACTION NE-CAVE-F)>
 
-<ROUTINE NE-CAVE-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE NE-CAVE-F ("OPT" (CONTEXT <>))
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
 		<NOTE-WALL ,NWALL ,W?NORTHWEST>
 		<MENTION-BEAM?>
@@ -3229,7 +3229,7 @@ THE ,BENCH " in the center of the room">
 	(FNUM OXROADS)
 	(ACTION NE-WALL-F)>
 
-<ROUTINE NE-WALL-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE NE-WALL-F ("OPT" (CONTEXT <>))
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
 		<TELL 
 "The air is cool here, beneath the shadow of a towering wall of rock">
@@ -3511,7 +3511,7 @@ THE ,BENCH " in the center of the room">
 	 <PRINT "a sky black with thunderclouds">
 	 <RTRUE>>
 	
-<ROUTINE ENTER-PLAIN? ("AUX" X Y L LL)
+<ROUTINE ENTER-PLAIN? ("AUX" L LL)
 	 <SET L <LOC ,GOBLET>>
 	 <KERBLAM>
 	 <TELL "Forks of " B ,W?LIGHTNING 
@@ -3566,7 +3566,7 @@ THE ,BENCH " in the center of the room">
 
 <GLOBAL PLAIN-COUNT:NUMBER 6>
 
-<ROUTINE PLAIN-CONTEXT? (CONTEXT "AUX" TBL X)
+<ROUTINE PLAIN-CONTEXT? (CONTEXT "AUX" X)
 	 <COND (<EQUAL? .CONTEXT ,M-ENTERING>
 		<COND (<NOT <IS? ,HERE ,TOUCHED>>
 		       <COND (<DLESS? PLAIN-COUNT 1>
@@ -4461,7 +4461,7 @@ THE ,BENCH " in the center of the room">
 	 <TELL " to the " ,BRIDGE-DIR " End">
 	 <RTRUE>>
 
-<ROUTINE ON-BRIDGE-F ("OPT" (CONTEXT <>) "AUX" X)
+<ROUTINE ON-BRIDGE-F ("OPT" (CONTEXT <>))
 	 <COND (<EQUAL? .CONTEXT ,M-LOOK>
 		<TELL 
 "The entire bridge jerks and sways as you struggle to keep your footing on the slippery ropes. " <PICK-NEXT ,BRIDGE-TYPES> ,PERIOD>
@@ -5443,7 +5443,7 @@ THE ,BENCH " in the center of the room">
 		<RETURN <GET <GETP ,SW-MOOR ,P?NE> ,XROOM>>)>
 	 <RFALSE>>
 
-<ROUTINE SETUP-MOOR? ("AUX" RM RM2 RM3 OBJ LEN)
+<ROUTINE SETUP-MOOR? ("AUX" RM RM2 RM3 LEN)
 	 <SCRAMBLE ,MOOR-ROOMS>
 
        ; "Connect N-MOOR to north edge of moor."
@@ -5572,7 +5572,7 @@ THE ,BENCH " in the center of the room">
 		<RETURN <GET <GETP ,ON-PIKE ,P?WEST> ,XROOM>>)>
 	 <RFALSE>>
 
-<ROUTINE SETUP-PLAIN? ("AUX" RM OBJ LEN)
+<ROUTINE SETUP-PLAIN? ("AUX" RM)
 	 <SETG SCRAMBLE-LENGTH 3>
 	 <SCRAMBLE ,PLAIN-ROOMS #2 1110111011101110>
 	 <SETG SCRAMBLE-LENGTH 1>
@@ -5814,7 +5814,7 @@ THE ,BENCH " in the center of the room">
 <GLOBAL SCRAMBLE-LENGTH:NUMBER 1>
 
 <ROUTINE NEXT-ROOM? (RM "AUX" (DIR 0) (DIAG 0)
-		     	      PATH-LEN CNT BITS RNUM NRM NRNUM X LEN TBL)
+		     	      PATH-LEN CNT BITS RNUM NRM NRNUM X LEN)
 	 <SET RNUM <GETP .RM ,P?DNUM>> ; "Get position in matrix."
 	 <COND (<ZERO? .RNUM>
 		<RFALSE>)>
@@ -5907,7 +5907,7 @@ THE ,BENCH " in the center of the room">
 	 
 	 <RETURN .NRM>>
 
-<ROUTINE CAN-EXTEND? (RNUM DIR "AUX" (CNT 0) XDIR X BITS)
+<ROUTINE CAN-EXTEND? (RNUM DIR "AUX" (CNT 0) XDIR BITS)
 	 <SET XDIR <+ .DIR 4>>
 	 <COND (<G? .XDIR 7>
 		<SET XDIR <- .XDIR 8>>)> ; "Establish opposite DIR."
@@ -6048,7 +6048,7 @@ THE ,BENCH " in the center of the room">
 
 "Find northwesternmost room in maze."
 
-<ROUTINE NW-ROOM? ("AUX" COL PTR X I RM)
+<ROUTINE NW-ROOM? ("AUX" COL PTR X RM)
 	 <SET COL 1>
 	 <REPEAT ()
 	    <SET X .COL>
